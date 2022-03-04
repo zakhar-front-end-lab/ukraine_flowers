@@ -138,11 +138,40 @@ label {
     color: #0094D4;;
 }
 
+.address {
+    text-decoration: underline;
+}
+
 .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 30px auto;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     max-width: 350px;
+}
+
+.footer .section {
+    display: flex;
+    margin: 2px;
+}
+
+.footer .section .phone-number-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer .section .phone-number {
+    background: #FEE006;
+    color: black;
+    padding: 4px;
+}
+
+.footer .section .icon {
+    width: 32px;
+    height: 32px;
 }
