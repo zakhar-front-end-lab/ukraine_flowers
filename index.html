@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!--<header class="header">-->
+<!--    <div class="blue">-->
+<!--        <h1>FlowersForUkraine.com</h1>-->
+<!--    </div>-->
+<!--    <div class="yellow">-->
+<!--        <h2>Donate to the flowers,</h2>-->
+<!--        <h2>Stop The War</h2>-->
+<!--        <h6>All the money are donated</h6>-->
+<!--        <h6>to the Ukrainian Army</h6>-->
+<!--    </div>-->
+<!--</header>-->
+
+<form action="/form_handler.php" method="post" class="form">
+
+    <div class="property amount">
+        <span class="label">Amount:</span>
+
+        <label class="radio-option">
+            <input type="radio" name="amount" value="30" required>
+            <span class="main-content">30€</span>
+        </label>
+
+        <label class="radio-option">
+            <input type="radio" name="amount" value="50">
+            <span class="main-content">50€</span>
+        </label>
+
+        <label class="radio-option">
+            <input type="radio" name="amount" value="70">
+            <span class="main-content">70€</span>
+        </label>
+    </div>
+
+    <div class="property pay-by">
+        <span class="label">Pay by:</span>
+
+        <label class="radio-option">
+            <input type="radio" name="pay_by" value="stripe" required>
+            <span class="main-content">Credit card (Stripe)</span>
+        </label>
+
+        <label class="radio-option">
+            <input type="radio" name="pay_by" value="paypal">
+            <span class="main-content">PayPal</span>
+        </label>
+    </div>
+
+    <div class="property deliver-to">
+        <span class="label">Deliver to:</span>
+
+        <label class="radio-option">
+            <input type="radio" name="deliver_to" value="refugee_shelter" required>
+            <span class="main-content">Refugee Shelter</span>
+            <span class="sub-content">
+                We deliver your flowers directly to ukrainians, who has to leave the country.
+            </span>
+        </label>
+
+        <label class="radio-option">
+            <input type="radio" name="deliver_to" value="shop">
+            <span class="main-content">Our Shop and Pick Up</span>
+            <span class="sub-content">
+                After payment you should pick it up by yourself in our shop:
+                <b>Kukupesa sisustuskaubamaja, Pärnu maantee, Tallinn, Estonia</b>
+                Monday–Friday at 8:00–18:00
+            </span>
+        </label>
+    </div>
+
+    <div class="property email">
+        <label>
+            <span class="label">Email:</span>
+            <input type="email" name="email" required>
+        </label>
+
+        <button class="donate-btn">Donate</button>
+    </div>
+
+</form>
+
+<footer class="footer">
+    For more information contact us: <span class="info-block">Phone number: 123 456 78 67</span> <span
+        class="info-block">Instagram: FlowersForUkraine</span>
+</footer>
+
+</body>
+</html>
