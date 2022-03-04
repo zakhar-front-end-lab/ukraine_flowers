@@ -28,7 +28,7 @@
         <span class="label">Amount:</span>
 
         <label class="radio-option">
-            <input type="radio" name="amount" value="30" required>
+            <input type="radio" name="amount" value="30" required checked>
             <span class="main-content">30€</span>
         </label>
 
@@ -47,7 +47,7 @@
         <span class="label">Pay by:</span>
 
         <label class="radio-option">
-            <input type="radio" name="pay_by" value="stripe" required>
+            <input type="radio" name="pay_by" value="stripe" required checked>
             <span class="main-content">Credit card (Stripe)</span>
         </label>
 
@@ -60,30 +60,28 @@
     <div class="property deliver-to">
         <span class="label">Deliver to:</span>
 
-        <label class="radio-option">
-            <input type="radio" name="deliver_to" value="refugee_shelter" required>
-            <span class="main-content">Refugee Shelter</span>
+        <div class="radio-option">
+            <input type="radio" name="deliver_to" id="deliver-to-1" value="refugee_shelter" required checked>
+            <label class="main-content" for="deliver-to-1">Refugee Shelter</label>
             <span class="sub-content">
                 We deliver your flowers directly to ukrainians, who has to leave the country.
             </span>
-        </label>
+        </div>
 
-        <label class="radio-option">
-            <input type="radio" name="deliver_to" value="shop">
-            <span class="main-content">Our Shop and Pick Up</span>
+        <div class="radio-option">
+            <input type="radio" name="deliver_to" id="deliver-to-2" value="shop">
+            <label class="main-content" for="deliver-to-2">Shop and Pick Up</label>
             <span class="sub-content">
-                After payment you should pick it up by yourself in our shop:
-                <b class="address">Kukupesa sisustuskaubamaja, Pärnu maantee, Tallinn, Estonia</b>
+                After payment you should pick it up by yourself in the shop:
+                <a href="https://g.page/Sisustuspood?share" target="_blank" class="address">Kukupesa sisustuskaubamaja, Pärnu maantee, Tallinn, Estonia</a>
                 Monday–Friday at 8:00–18:00
             </span>
-        </label>
+        </div>
     </div>
 
     <div class="property email">
-        <label>
-            <span class="label">Email:</span>
-            <input type="email" name="email" required>
-        </label>
+        <label class="label" for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
 
         <button class="donate-btn">Donate</button>
     </div>

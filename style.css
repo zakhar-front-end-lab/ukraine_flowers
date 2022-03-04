@@ -23,6 +23,7 @@ input[type="radio"] {
     width: 16px;
     height: 16px;
     margin: 0 13px 0 0;
+    cursor: pointer;
 }
 
 label {
@@ -141,7 +142,7 @@ label {
 }
 
 .address {
-    text-decoration: underline;
+    color: #333;
 }
 
 .footer {
@@ -179,7 +180,7 @@ label {
     height: 32px;
 }
 
-@media screen and (max-width: 840px) {
+@media (max-width: 840px) {
     .form {
         width: 100%;
         margin-top: 90px;
@@ -205,9 +206,10 @@ label {
         max-width: 100%;
     }
 
+    .property.email input,
     .property.email .donate-btn {
-        align-self: center;
-        margin-left: 0;
-        margin-top: 20px;
+        width: auto;
+        align-self: stretch;
+        margin: 10px 30px 0;
     }
 }
