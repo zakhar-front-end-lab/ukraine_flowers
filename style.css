@@ -2,6 +2,17 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Open Sans;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./flowers-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 * {
@@ -21,21 +32,34 @@ label {
 .header {
     display: flex;
     flex-direction: column;
-}
-
-.header .blue {
-    display: flex;
-    justify-content: center;
-    background: #0092ff;
-    color: #fde831;
-}
-
-.header .yellow {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    background: #fde831;
-    color: #0092ff;
+    text-align: center;
+}
+
+.header .site-name {
+    color: #FEE006;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.header .donation-request {
+    max-width: 600px;
+    font-size: 56px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.header .donation-goal {
+    color: #FFFFFF;
+    max-width: 180px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form {
+    display: block;
+    margin-top: 150px;
 }
 
 .property {
@@ -78,7 +102,7 @@ label {
 }
 
 .property.amount .radio-option .main-content {
-    color: #0092FF;
+    color: #0094D4;
     font-size: 56px;
 }
 
@@ -98,7 +122,7 @@ label {
 .property.email .donate-btn {
     width: 240px;
     height: 48px;
-    background: #0092FF;
+    background: #0094D4;
     border-radius: 24px;
     border: none;
     cursor: pointer;
@@ -109,12 +133,16 @@ label {
     margin-left: 100px;
 }
 
-.footer {
-    margin: 40px auto;
-    max-width: 500px;
-    font-size: 10px;
+.property.email .donate-btn:active {
+    background: #FFFFFF;
+    color: #0094D4;;
 }
 
-.footer .info-block {
-    margin-left: 10px;
+.footer {
+    margin: 30px auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    max-width: 350px;
 }
