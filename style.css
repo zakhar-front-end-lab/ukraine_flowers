@@ -12,7 +12,7 @@ body {
     align-items: center;
     background-image: url("./flowers-bg.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 960px;
 }
 
 * {
@@ -94,7 +94,7 @@ label {
 }
 
 .property.amount .label {
-    margin-top: 32px;
+    margin-top: 34px;
 }
 
 .property.amount .radio-option {
