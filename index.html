@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AQT2CU0VD8w2QDhq83Wt5WVRVb6t3Sn1QNu91XMqkM05kW0y981sb3ixt2chaocG-iCt-UjvhaTt-Lwe&currency=EUR&components=buttons&disable-funding=credit,card""></script>
 </head>
 <body>
 
@@ -86,9 +87,12 @@
         <label class="label" for="email">Email:</label>
         <input type="email" name="email" id="email" required>
 
-        <button class="donate-btn">Donate</button>
+        <button id="donate" class="donate-btn">Donate</button>
+
+        <div id="paypal-buttons-container" class="paypal-buttons-container"></div>
     </div>
 </form>
+
 
 <footer class="footer">
     <div class="section">Contact us for more information:</div>
@@ -115,3 +119,67 @@
 
 </body>
 </html>
+
+
+<script>
+    // Render the PayPal buttons
+    paypal.Buttons({
+        style: {
+            layout:  'vertical',
+            color:   'blue',
+            shape:   'pill',
+            label:   'paypal'
+        },
+        createOrder: function(data, actions) {
+          let amount = document.querySelector('input[name="amount"]:checked').value;
+          let email = document.querySelector('input[name="email"]').value;
+
+          let refugeeShelterAddress =  {
+            type: 'SHIPPING',
+            address: 'Refugee Shelter'
+          };
+          let pickUpAddress = {
+            type: 'PICKUP_IN_PERSON',
+            address: 'Kukupesa sisustuskaubamaja, Pärnu maantee, Tallinn, Estonia'
+          };
+
+          // TODO need to fill shipping address corectly. here is a schema https://developer.paypal.com/api/orders/v2/#definition-shipping_detail
+          // shipping property for purchase_units object
+          let shipping = document.querySelector('input[name="deliver_to"]:checked').value === 'shop' ? pickUpAddress : refugeeShelterAddress;
+
+          return actions.order.create({
+            payer: {
+                email: email
+            },
+            purchase_units: [{
+              amount: {
+                "currency_code": "EUR",
+                value: amount
+              }
+            }]
+          },
+          );
+        }, // Finalize the transaction after payer approval
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+           // DISPLAY SUCCESS MESSAGE/SCREEN
+           console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          });
+        }
+    }).render('#paypal-buttons-container');
+    document.body.querySelector('#paypal-buttons-container').style.display = 'none';
+
+    document.querySelectorAll('input[name=pay_by]').forEach(function (el) {
+      el.addEventListener('change', function (event) {
+          if(event.target.value === "paypal") {
+            document.body.querySelector('#paypal-buttons-container').style.display = 'block';
+
+            document.body.querySelector('#donate').style.display = 'none';
+          } else {
+            document.body.querySelector('#donate').style.display = 'block';
+
+            document.body.querySelector('#paypal-buttons-container').style.display = 'none';
+          }
+      });
+    });
+</script>

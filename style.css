@@ -227,3 +227,11 @@ label {
         margin: 8px 32px 0;
     }
 }
+
+
+.paypal-buttons-container {
+    display: block;
+    margin-left: 100px;
+    width: 240px;
+    height: 48px;
+}
