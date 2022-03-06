@@ -158,6 +158,10 @@ header .donation-goal {
     font-weight: 400;
 }
 
+.property.email {
+    align-items: center;
+}
+
 .property.email input {
     width: 240px;
     height: 48px;
