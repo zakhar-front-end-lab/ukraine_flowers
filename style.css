@@ -324,6 +324,11 @@ footer .contacts .contact-link .link-text.cryptedmail:after {
     }
 }
 
+@media (max-width: 400px) {
+    footer .contacts .contact-link {
+        margin: 0 0 16px 0;
+    }
+}
 
 .paypal-buttons-container {
     display: block;
