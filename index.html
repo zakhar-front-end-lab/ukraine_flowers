@@ -6,13 +6,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic">
     <link rel="stylesheet" href="./style.css">
     <script src="https://www.paypal.com/sdk/js?client-id=AQT2CU0VD8w2QDhq83Wt5WVRVb6t3Sn1QNu91XMqkM05kW0y981sb3ixt2chaocG-iCt-UjvhaTt-Lwe&currency=EUR&components=buttons&disable-funding=credit,card""></script>
 </head>
 <body>
 
-<header class="header">
+<header>
     <h1 class="site-name">FlowersForUkraine.com</h1>
 
     <h2 class="donation-request">
@@ -33,17 +33,17 @@
 
         <label class="radio-option">
             <input type="radio" name="amount" value="30" required checked>
-            <span class="main-content">30€</span>
+            <span class="main-content"><b>30</b>€</span>
         </label>
 
         <label class="radio-option">
             <input type="radio" name="amount" value="50">
-            <span class="main-content">50€</span>
+            <span class="main-content"><b>50</b>€</span>
         </label>
 
         <label class="radio-option">
             <input type="radio" name="amount" value="70">
-            <span class="main-content">70€</span>
+            <span class="main-content"><b>70</b>€</span>
         </label>
     </div>
 
@@ -77,7 +77,7 @@
             <label class="main-content" for="deliver-to-2">Shop and Pick Up</label>
             <span class="sub-content">
                 After payment you should pick it up by yourself in the shop:<br/>
-                <a href="https://g.page/Sisustuspood?share" target="_blank" class="address">Kukupesa sisustuskaubamaja, Pärnu maantee, Tallinn, Estonia</a><br/>
+                <a href="https://goo.gl/maps/QKcGPa5ER99Yx2g3A" target="_blank" class="address"><b>Tondi 17, Tallinn, Estonia</b></a><br/>
                 Monday–Saturday, 10AM–6PM
             </span>
         </div>
@@ -94,27 +94,33 @@
 </form>
 
 
-<footer class="footer">
-    <div class="section">Contact us for more information:</div>
-    <div class="section">
-
-        <a class="phone-number-wrapper" href="#" data-code="+372" data-number="51991891"
+<footer>
+    <p>Hello! We have been dealing with flowers for 12 years already in Ukraine. When the war started we have been in Europe with the flowers which were supposed to go to Ukraine but didn't.</p>
+    <p>Now everyone does what he is able to do to support Ukraine. We are the warriors and we are fighting! We are doing our best to survive and help those, about whom we care.</p>
+    <p>When we have delivered flowers for the last days, we have heard many times: «It’s the least, we can do». This is not the least, this will help the remnants of our world not fall apart completely.</p>
+    <h3>
+        It’s not just flowers you get, it means much more for us, for Ukraine.<br/>
+        Glory to Ukraine!
+    </h3>
+    <p>Contact us for more information:</p>
+    <section class="contacts">
+        <a class="contact-link" href="#" data-code="+372" data-number="51991891"
             onclick="window.location.href = 'tel:' + this.dataset.code + this.dataset.number; return false;">
             <img class="icon" src="./whatsapp-logo.png" alt="[WhatsUp]">
-            <div class="phone-number cryptedphone" data-code="+372" data-number="5199 18 91"></div>
+            <div class="link-text cryptedphone" data-code="+372" data-number="5199 18 91"></div>
         </a>
 
-        <a class="phone-number-wrapper" href="https://instagram.com/arrowstone_flowers?utm_medium=copy_link">
+        <a class="contact-link" href="https://instagram.com/arrowstone_flowers?utm_medium=copy_link">
             <img class="icon" src="./insta-logo.png" alt="[Instagram]">
-            <div class="phone-number">arrowstone_flowers</div>
+            <div class="link-text">arrowstone_flowers</div>
         </a>
 
-        <a class="phone-number-wrapper last" href="#" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"
+        <a class="contact-link" href="#" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"
         onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
             <img class="icon" src="./email-logo.png" alt="[Email]">
-            <div class="phone-number cryptedmail" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"></div>
+            <div class="link-text cryptedmail" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"></div>
         </a>
-    </div>
+    </section>
 </footer>
 
 </body>
