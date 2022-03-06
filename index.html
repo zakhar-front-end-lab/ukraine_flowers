@@ -12,116 +12,163 @@
 </head>
 <body>
 
-<header>
-    <h1 class="site-name">FlowersForUkraine.com</h1>
+<div class="global-container">
+    <header>
+        <h1 class="site-name">FlowersForUkraine.com</h1>
 
-    <h2 class="donation-request">
-        Donate to the Flowers,<br/>
-        Stop the War
-    </h2>
+        <h2 class="donation-request">
+            Donate to the Flowers,<br/>
+            Stop the War
+        </h2>
 
-    <h3 class="donation-goal">
-        All the earned money<br/>
-        are donated to Ukraine
-    </h3>
-</header>
+        <h3 class="donation-goal">
+            All the earned money<br/>
+            are donated to humanitarian needs and saving lives in Ukraine
+        </h3>
+    </header>
 
-<form action="/form_handler.php" method="post" class="form">
+    <form action="/form_handler.php" method="post" class="form">
 
-    <div class="property amount">
-        <span class="label">Amount:</span>
+        <div class="property amount">
+            <span class="label">Amount:</span>
 
-        <label class="radio-option">
-            <input type="radio" name="amount" value="30" required checked>
-            <span class="main-content"><b>30</b>€</span>
-        </label>
+            <label class="radio-option">
+                <input type="radio" name="amount" value="30" required checked>
+                <span class="main-content"><b>30</b>€</span>
+            </label>
 
-        <label class="radio-option">
-            <input type="radio" name="amount" value="50">
-            <span class="main-content"><b>50</b>€</span>
-        </label>
+            <label class="radio-option">
+                <input type="radio" name="amount" value="50">
+                <span class="main-content"><b>50</b>€</span>
+            </label>
 
-        <label class="radio-option">
-            <input type="radio" name="amount" value="70">
-            <span class="main-content"><b>70</b>€</span>
-        </label>
-    </div>
-
-    <div class="property pay-by">
-        <span class="label">Pay by:</span>
-
-        <label class="radio-option">
-            <input type="radio" name="pay_by" value="stripe" required checked>
-            <span class="main-content">Credit card (Stripe)</span>
-        </label>
-
-        <label class="radio-option">
-            <input type="radio" name="pay_by" value="paypal">
-            <span class="main-content">PayPal</span>
-        </label>
-    </div>
-
-    <div class="property deliver-to">
-        <span class="label">Deliver to:</span>
-
-        <div class="radio-option">
-            <input type="radio" name="deliver_to" id="deliver-to-1" value="refugee_shelter" required checked>
-            <label class="main-content" for="deliver-to-1">Refugee Shelter</label>
-            <span class="sub-content">
-                We deliver your flowers directly to Ukrainians, who had to leave the country. To help them see the light.
-            </span>
+            <label class="radio-option">
+                <input type="radio" name="amount" value="70">
+                <span class="main-content"><b>70</b>€</span>
+            </label>
         </div>
 
-        <div class="radio-option">
-            <input type="radio" name="deliver_to" id="deliver-to-2" value="shop">
-            <label class="main-content" for="deliver-to-2">Shop and Pick Up</label>
-            <span class="sub-content">
+        <div class="property pay-by">
+            <span class="label">Pay by:</span>
+
+            <label class="radio-option">
+                <input type="radio" name="pay_by" value="stripe" required checked>
+                <span class="main-content">Credit card</span>
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="pay_by" value="paypal">
+                <span class="main-content">PayPal</span>
+            </label>
+        </div>
+
+        <div class="property deliver-to">
+            <span class="label">Deliver to:</span>
+
+            <div class="radio-option">
+                <input type="radio" name="deliver_to" id="deliver-to-1" value="refugee_shelter" required checked>
+                <label class="main-content" for="deliver-to-1">Refugee Shelter</label>
+                <span class="sub-content">
+                We deliver your flowers directly to Ukrainians, who had to leave the country. To help them see the light.
+            </span>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" name="deliver_to" id="deliver-to-2" value="ukraine_heroes">
+                <label class="main-content" for="deliver-to-2">Heroes in Ukraine</label>
+                <span class="sub-content">
+                Women in Ukrainian army, volonteers, doctors and people whose everyday job is saving lives in Ukraine.
+            </span>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" name="deliver_to" id="deliver-to-3" value="shop">
+                <label class="main-content" for="deliver-to-3">Shop and Pick Up</label>
+                <span class="sub-content">
                 After payment you should pick it up by yourself in the shop:<br/>
                 <a href="https://goo.gl/maps/QKcGPa5ER99Yx2g3A" target="_blank" class="address"><b>Tondi 17, Tallinn, Estonia</b></a><br/>
                 Monday–Saturday, 10AM–6PM
             </span>
+            </div>
         </div>
-    </div>
 
-    <div class="property email">
-        <label class="label" for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
+        <div class="property email">
+            <label class="label" for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-        <button id="donate" class="donate-btn">Donate</button>
+            <button id="donate" class="donate-btn">Donate</button>
 
-        <div id="paypal-buttons-container" class="paypal-buttons-container"></div>
-    </div>
-</form>
+            <div id="paypal-buttons-container" class="paypal-buttons-container"></div>
+        </div>
+    </form>
 
+    <footer>
+        <p>Hello! We have been dealing with flowers for 12 years already in Ukraine. When the war started we have been
+            in Europe with the flowers which were supposed to go to Ukraine but didn't.</p>
+        <p>Now everyone does what he is able to do to support Ukraine. We are the warriors and we are fighting! We are
+            doing our best to survive and help those, about whom we care. </p>
+        <p>When we have delivered flowers for the last days, we have heard many times: «It’s the least, we can do». This
+            is not the least, this will help the remnants of our world not fall apart completely.</p>
+        <p>It’s not just flowers you get, it means much more for us, for Ukraine.</p>
+        <p>Glory to Ukraine!</p>
 
-<footer>
-    <p>Hello! We have been dealing with flowers for 12 years already in Ukraine. When the war started we have been in Europe with the flowers which were supposed to go to Ukraine but didn't.</p>
-    <p>Now everyone does what he is able to do to support Ukraine. We are the warriors and we are fighting! We are doing our best to survive and help those, about whom we care.</p>
-    <p>When we have delivered flowers for the last days, we have heard many times: «It’s the least, we can do». This is not the least, this will help the remnants of our world not fall apart completely.</p>
-    <h3>
-        It’s not just flowers you get, it means much more for us, for Ukraine.<br/>
-        Glory to Ukraine!
-    </h3>
-    <p>Contact us for more information:</p>
-    <section class="contacts">
-        <a class="contact-link" href="#" data-code="+372" data-number="51991891"
-            onclick="window.location.href = 'tel:' + this.dataset.code + this.dataset.number; return false;">
-            <img class="icon" src="./whatsapp-logo.png" alt="[WhatsUp]">
-            <div class="link-text cryptedphone" data-code="+372" data-number="5199 18 91"></div>
-        </a>
+        <div class="account-details">
+            <h4 class="header">EUR account details for ArrowStone</h4>
+            <p>One more direct payment method. ArrowStone is using Wise to receive euro payments. You can send money to
+                these details from any bank in the Eurozone.</p>
 
-        <a class="contact-link" href="https://instagram.com/arrowstone_flowers?utm_medium=copy_link">
-            <img class="icon" src="./insta-logo.png" alt="[Instagram]">
-            <div class="link-text">arrowstone_flowers</div>
-        </a>
+            <section class="info-blocks-container">
 
-        <a class="contact-link" href="#" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"
-        onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
-            <img class="icon" src="./email-logo.png" alt="[Email]">
-            <div class="link-text cryptedmail" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"></div>
-        </a>
-    </section>
-</footer>
+                <div class="info-block">
+                    <b class="caption">IBAN</b>
+                    <span>BE58 9671 8260 4179</span>
+                </div>
+
+                <div class="info-block">
+                    <b class="caption">Account holder</b>
+                    <span>ArrowStone</span>
+                </div>
+
+                <div class="info-block">
+                    <b class="caption">BIC</b>
+                    <span>TRWIBEB1XXX</span>
+                </div>
+
+                <div class="info-block">
+                    <b class="caption">Wise's address</b>
+                    <span>
+                        Avenue Louise 54, Room S52 <br>
+                        Brussels <br>
+                        1050 <br>
+                        Belgium
+                    </span>
+                </div>
+
+            </section>
+        </div>
+
+        <p>Contact us for more information:</p>
+        <section class="contacts">
+            <a class="contact-link" href="#" data-code="+372" data-number="51991891"
+               onclick="window.location.href = 'tel:' + this.dataset.code + this.dataset.number; return false;">
+                <img class="icon" src="./whatsapp-logo.png" alt="[WhatsUp]">
+                <div class="link-text cryptedphone" data-code="+372" data-number="5199 18 91"></div>
+            </a>
+
+            <a class="contact-link" href="https://instagram.com/arrowstone_flowers?utm_medium=copy_link">
+                <img class="icon" src="./insta-logo.png" alt="[Instagram]">
+                <div class="link-text">arrowstone_flowers</div>
+            </a>
+
+            <a class="contact-link" href="#" data-name="arrowstone.flowers" data-domain="gmail" data-tld="com"
+               onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+                <img class="icon" src="./email-logo.png" alt="[Email]">
+                <div class="link-text cryptedmail" data-name="arrowstone.flowers" data-domain="gmail"
+                     data-tld="com"></div>
+            </a>
+        </section>
+    </footer>
+</div>
 
 </body>
 </html>
