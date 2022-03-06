@@ -233,13 +233,17 @@ footer .contacts {
 footer .contacts .contact-link {
     display: flex;
     align-items: center;
+    min-width: 224px;
     text-decoration: none;
-    margin: 0 32px 16px 0;
+    margin: 0 16px 16px 0;
     background: #FEE006;
 }
 
 
 footer .contacts .contact-link .link-text {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
     color: #333;
     line-height: 32px;
     padding: 0 8px;
@@ -292,6 +296,10 @@ footer .contacts .contact-link .link-text.cryptedmail:after {
         padding-left: 32px;
     }
 
+    .property.email {
+        align-items: flex-start;
+    }
+
     .property.email input,
     .property.email .donate-btn {
         width: auto;
@@ -308,10 +316,6 @@ footer .contacts .contact-link .link-text.cryptedmail:after {
     header .donation-request {
         font-size: 48px;
         line-height: 48px;
-    }
-
-    footer .contacts .contact-link {
-        margin: 0 16px 16px 0;
     }
 
     .message .heading {
